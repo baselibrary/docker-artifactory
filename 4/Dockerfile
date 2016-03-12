@@ -3,7 +3,7 @@ MAINTAINER ShawnMa <qsma@thoughtworks.com>
 
 ## Version
 ENV ARTIFACTORY_MAJOR   4
-ENV ARTIFACTORY_VERSION 4.3.3
+ENV ARTIFACTORY_VERSION 4.5.2
 
 ## Repository
 RUN \
