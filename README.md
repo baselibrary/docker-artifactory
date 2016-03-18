@@ -4,8 +4,8 @@
 
 ### Base Docker Image
 
-* `latest`: artifactory 4.3.3
-* `4`   : nexus 4.3.3
+* `latest`: artifactory pro 4.6
+* `4`     : artifactory pro 4.6
 
 ### Installation
 
