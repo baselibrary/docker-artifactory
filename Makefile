@@ -1,6 +1,6 @@
 NAME     = baselibrary/artifactory
 REPO     = git@github.com:baselibrary/docker-artifactory.git
-REGISTRY = thoughtworks.io
+REGISTRY = thoughtworks.ga
 VERSIONS = $(foreach df,$(wildcard */Dockerfile),$(df:%/Dockerfile=%))
 
 all: build 
