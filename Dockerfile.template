@@ -28,6 +28,6 @@ ENV ARTIFACTORY_HOME /var/opt/jfrog/artifactory
 
 ENTRYPOINT ["/docker-entrypoint.sh"]
 
-EXPOSE 80 443 8081
+EXPOSE 8081
 
 VOLUME ["/var/lib/artifactory"]
