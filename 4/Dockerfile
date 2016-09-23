@@ -14,6 +14,10 @@ RUN \
 RUN \
   apt-get update &&\
   apt-get install -y jfrog-artifactory-pro=$ARTIFACTORY_VERSION &&\
+  mkdir -p /etc/opt/jfrog/artifactory /var/opt/jfrog/artifactory/{data,logs,backup} &&\
+  chown -R artifactory: /etc/opt/jfrog/artifactory /var/opt/jfrog/artifactory/{data,logs,backup} &&\
+  mkdir -p /var/opt/jfrog/artifactory/defaults/etc &&\
+  cp -rp /etc/opt/jfrog/artifactory/* /var/opt/jfrog/artifactory/defaults/etc/ &&\
   rm -rf /var/lib/apt/lists/*
 
 ## Scripts
