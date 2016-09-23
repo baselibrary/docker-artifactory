@@ -16,6 +16,12 @@ RUN \
   apt-get install -y jfrog-artifactory-pro=$ARTIFACTORY_VERSION &&\
   rm -rf /var/lib/apt/lists/*
 
-VOLUME ["/var/lib/artifactory"]
+## Scripts
+ADD docker-entrypoint.sh /docker-entrypoint.sh
+RUN chmod a+x            /docker-entrypoint.sh
 
-CMD ["artifactory"]
+ENTRYPOINT ["/docker-entrypoint.sh"]
+
+EXPOSE 80 443 8081
+
+VOLUME ["/var/lib/artifactory"]
