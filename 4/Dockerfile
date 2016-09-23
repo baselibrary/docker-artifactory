@@ -24,6 +24,8 @@ RUN \
 ADD docker-entrypoint.sh /docker-entrypoint.sh
 RUN chmod a+x            /docker-entrypoint.sh
 
+ENV ARTIFACTORY_HOME /var/opt/jfrog/artifactory
+
 ENTRYPOINT ["/docker-entrypoint.sh"]
 
 EXPOSE 80 443 8081
